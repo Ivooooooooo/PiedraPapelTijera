@@ -1,0 +1,59 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #ffab40;
+}
+
+.divCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    max-width: 80%;
+}
+
+.imgCont {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+@keyframes rotar360 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotarClick {
+    animation: rotar360 1s linear;
+}
+
+.ppt {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ppt img {
+    width: 100px;
+}
+
+.ppt:hover {
+    transform: scale(1.1);
+}
+
+#resultado {
+    margin-top: 10px;
+}

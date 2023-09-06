@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Piedra, Papel o Tijera</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./img/piedra.png">
+</head>
+
+<body>
+    <h1>Piedra, Papel o Tijera</h1>
+    <div class="divCont">
+        <p>Elige una opción:</p>
+        <div class="imgCont">
+            <div class="ppt" onclick="jugar('piedra')">
+                <img src="./img/piedra.png" alt="Piedra">
+            </div>
+            <div class="ppt" onclick="jugar('papel')">
+                <img src="./img/papel.png" alt="Papel">
+            </div>
+            <div class="ppt" onclick="jugar('tijera')">
+                <img src="./img/tijera.png" alt="Tijera">
+            </div>
+        </div>
+        <p id="resultado"></p>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
