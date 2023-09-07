@@ -54,6 +54,19 @@ h1 {
     transform: scale(1.1);
 }
 
+.esp {
+    margin-right: 12px;
+}
+
 #resultado {
     margin-top: 10px;
+}
+
+.eleccionMaquina {
+    margin-top: 20px;
+}
+
+.eleccionMaquina img {
+    width: 100px;
+    transition: transform 1s;
 }
