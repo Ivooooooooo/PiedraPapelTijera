@@ -23,6 +23,11 @@ h1 {
     border-radius: 10px;
     background-color: #333;
     max-width: 80%;
+    transition: transform 0.3s;
+}
+
+.divCont:hover {
+    transform: scale(1.02);
 }
 
 .imgCont {
@@ -69,6 +74,14 @@ h1 {
 .eleccionMaquina img {
     width: 100px;
     transition: transform 1s;
+}
+
+.eleccionMaquina img.animate-rotation {
+    animation: rotar360 2s linear;
+}
+
+.maq:hover {
+    transform: scale(1.1);
 }
 
 .puntuaciones {

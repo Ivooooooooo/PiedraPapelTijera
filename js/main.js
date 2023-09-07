@@ -4,7 +4,12 @@ var puntuacionMaquina = 0;
 
 function jugar(eleccionUsuario) {
     if (!juegoHabilitado) {
-        alert("No está permitido jugar hasta dentro de 2 segundos.");
+        alert("Espera unos segundos antes de jugar nuevamente.");
+        return;
+    }
+
+    if (!validarEleccion(eleccionUsuario)) {
+        alert("La elección del usuario no es válida.");
         return;
     }
 
@@ -48,6 +53,11 @@ function jugar(eleccionUsuario) {
 
         actualizarPuntuaciones();
     }, 2000);
+}
+
+function validarEleccion(eleccion) {
+    var opcionesValidas = ["piedra", "papel", "tijera"];
+    return opcionesValidas.includes(eleccion);
 }
 
 function actualizarPuntuaciones() {
