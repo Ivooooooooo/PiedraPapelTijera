@@ -1,8 +1,10 @@
 var juegoHabilitado = true;
+var puntuacionUsuario = 0;
+var puntuacionMaquina = 0;
 
 function jugar(eleccionUsuario) {
     if (!juegoHabilitado) {
-        alert("No está permitido jugar hasta dentro de 3 segundos.");
+        alert("No está permitido jugar hasta dentro de 2 segundos.");
         return;
     }
 
@@ -10,7 +12,7 @@ function jugar(eleccionUsuario) {
 
     setTimeout(function () {
         juegoHabilitado = true;
-    }, 3000);
+    }, 2000);
 
     var opciones = ["piedra", "papel", "tijera"];
     var eleccionComputadora = opciones[Math.floor(Math.random() * 3)];
@@ -25,8 +27,10 @@ function jugar(eleccionUsuario) {
         (eleccionUsuario === "tijera" && eleccionComputadora === "papel")
     ) {
         resultado = "Ganaste. La computadora eligió " + eleccionComputadora + ".";
+        puntuacionUsuario++;
     } else {
         resultado = "Perdiste. La computadora eligió " + eleccionComputadora + ".";
+        puntuacionMaquina++;
     }
 
     document.getElementById("resultado").innerHTML = resultado;
@@ -41,5 +45,12 @@ function jugar(eleccionUsuario) {
     setTimeout(function () {
         img.classList.remove('rotarClick');
         eleccionMaquinaImg.classList.remove('rotarClick');
+
+        actualizarPuntuaciones();
     }, 2000);
+}
+
+function actualizarPuntuaciones() {
+    document.getElementById("puntuacion-usuario").textContent = puntuacionUsuario;
+    document.getElementById("puntuacion-maquina").textContent = puntuacionMaquina;
 }
